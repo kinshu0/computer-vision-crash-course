@@ -290,8 +290,6 @@ ___
 
 ### Breakthrough: AlexNet {.smaller}
 
-Breakthrough: ImageNet Classification with Deep Convolutional Neural Networks \
-
 - Imagenet has 15 million images at this point
 - 1.2 million images used to train
 - 60 million parameters; 5 convolutional layers
@@ -299,7 +297,7 @@ Breakthrough: ImageNet Classification with Deep Convolutional Neural Networks \
 - Non-saturating neurons (ReLU instead of tanh)
 - Overfitting: Dropout, Data Augmentation (cropping, flipping, color shifting) (training size effectively x2048)
 
-## AlexNet: Architecture
+## ImageNet Classification with Deep Convolutional Neural Networks: Architecture
 
 ![](images/alexnet.png){fig-align="center"}
 
