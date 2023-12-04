@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "intelligent-systems.html#origins",
+    "href": "intelligent-systems.html#origins",
+    "title": "Evolution of Computer Vision",
+    "section": "Origins",
+    "text": "Origins\n\nIt all started with CNNs\nFoundation of recent advances in computer vision\nArchitectures based on this model have been the most successful in the field"
+  },
+  {
+    "objectID": "intelligent-systems.html#origins-cat-neural-networks-cnns",
+    "href": "intelligent-systems.html#origins-cat-neural-networks-cnns",
+    "title": "Evolution of Computer Vision",
+    "section": "Origins: Cat Neural Networks (CNNs)",
+    "text": "Origins: Cat Neural Networks (CNNs)\n\nI am obviously talking about Cat Neural Networks\n\nReceptive fields of single neurones in the cat’s striate cortex\n\nCNNs"
+  },
+  {
+    "objectID": "intelligent-systems.html#i-dabble-in-neuroscience",
+    "href": "intelligent-systems.html#i-dabble-in-neuroscience",
+    "title": "Evolution of Computer Vision",
+    "section": "I dabble in neuroscience",
+    "text": "I dabble in neuroscience\nPsychology: Bottom-Up Processing\n\nNeuroscience:hierarchy structure : LGB (lateral geniculate body) -&gt; simple cells -&gt; complex cells -&gt; lower order hypercomplex cells -&gt; higher order hypercomplex cells"
+  },
+  {
+    "objectID": "intelligent-systems.html#neocognitron",
+    "href": "intelligent-systems.html#neocognitron",
+    "title": "Evolution of Computer Vision",
+    "section": "Neocognitron",
+    "text": "Neocognitron\n\nneural networks to process images existed before, innovation is making it “deep” with convolutional layers basically first deep learning for CV\n\n\nNeocognitron"
+  },
+  {
+    "objectID": "intelligent-systems.html#what-are-images",
+    "href": "intelligent-systems.html#what-are-images",
+    "title": "Evolution of Computer Vision",
+    "section": "What are images?",
+    "text": "What are images?\n\nimg = plt.imread('images/bean.png')\ngray_img = np.mean(img, axis=2)\n\nfig, ax = plt.subplots(1, 2)\nax[0].imshow(img)\nax[1].imshow(gray_img, cmap='gray')\nplt.show()"
+  },
+  {
+    "objectID": "intelligent-systems.html#images-as-functions",
+    "href": "intelligent-systems.html#images-as-functions",
+    "title": "Evolution of Computer Vision",
+    "section": "Images as Functions",
+    "text": "Images as Functions\n\nfig, ax = plt.subplots(subplot_kw={\"projection\": \"3d\"}); fig.set_size_inches(8, 7)\nsurf = ax.plot_surface(X, Y, 1 - np.flipud(blurred), cmap='summer')\n\n\n\n\n\n\n\n\n\\(f\\left(x,\\ y\\right)=\\)"
+  },
+  {
+    "objectID": "intelligent-systems.html#how-to-detect-edges",
+    "href": "intelligent-systems.html#how-to-detect-edges",
+    "title": "Evolution of Computer Vision",
+    "section": "How to detect edges?",
+    "text": "How to detect edges?\n\nEdges"
+  },
+  {
+    "objectID": "intelligent-systems.html#gradients",
+    "href": "intelligent-systems.html#gradients",
+    "title": "Evolution of Computer Vision",
+    "section": "Gradients",
+    "text": "Gradients\n\n\nSteep cliffs where intensity changes rapidly\nUse some calculus\n\\(\\nabla f = \\begin{bmatrix} \\frac{\\partial f}{\\partial x} \\\\ \\frac{\\partial f}{\\partial y} \\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "intelligent-systems.html#convolution",
+    "href": "intelligent-systems.html#convolution",
+    "title": "Evolution of Computer Vision",
+    "section": "Convolution",
+    "text": "Convolution\n\n2-D Convolution"
+  },
+  {
+    "objectID": "intelligent-systems.html#convolution-1",
+    "href": "intelligent-systems.html#convolution-1",
+    "title": "Evolution of Computer Vision",
+    "section": "Convolution",
+    "text": "Convolution\n\n2-D Convolution"
+  },
+  {
+    "objectID": "intelligent-systems.html#sobel",
+    "href": "intelligent-systems.html#sobel",
+    "title": "Evolution of Computer Vision",
+    "section": "Sobel",
+    "text": "Sobel\n\nsobel_x = np.array([[-1, 0, 1],\n                    [-2, 0, 2],\n                    [-1, 0, 1]])\n# sobel operator for y-direction\nsobel_y = np.array([[1, 2, 1],\n                    [0, 0, 0],\n                    [-1, -2, -1]])"
+  },
+  {
+    "objectID": "intelligent-systems.html#sobel-linear-filter",
+    "href": "intelligent-systems.html#sobel-linear-filter",
+    "title": "Evolution of Computer Vision",
+    "section": "Sobel Linear Filter",
+    "text": "Sobel Linear Filter\n\nconvolved_x = convolve2d(blurred, sobel_x, mode='same')\nconvolved_y = convolve2d(blurred, sobel_y, mode='same')\ncombined_edges = np.sqrt(convolved_x**2 + convolved_y**2)"
+  },
+  {
+    "objectID": "intelligent-systems.html#other-filters",
+    "href": "intelligent-systems.html#other-filters",
+    "title": "Evolution of Computer Vision",
+    "section": "Other Filters",
+    "text": "Other Filters"
+  },
+  {
+    "objectID": "intelligent-systems.html#traditional-computer-vision",
+    "href": "intelligent-systems.html#traditional-computer-vision",
+    "title": "Evolution of Computer Vision",
+    "section": "Traditional Computer Vision",
+    "text": "Traditional Computer Vision\n\n\n\nPreprocessing: Denoising, Edge Detection, Subsampling\nSegmentation: Thresholding, Active Contours\nFeature Extraction: Scale Invariant Feature Transform (SIFT), Speeded Up Robust Features (SURF)\n\n\n\nDimension Reduction: PCA\nClassification: Support Vector Machines (SVM), Random Forests, Boosting, Bagging, K-Nearest Neighbors (KNN)"
+  },
+  {
+    "objectID": "intelligent-systems.html#domain-computer-aided-diagnosis",
+    "href": "intelligent-systems.html#domain-computer-aided-diagnosis",
+    "title": "Evolution of Computer Vision",
+    "section": "Domain: Computer Aided Diagnosis",
+    "text": "Domain: Computer Aided Diagnosis"
+  },
+  {
+    "objectID": "intelligent-systems.html#diagnosis-pipeline",
+    "href": "intelligent-systems.html#diagnosis-pipeline",
+    "title": "Evolution of Computer Vision",
+    "section": "Diagnosis Pipeline",
+    "text": "Diagnosis Pipeline"
+  },
+  {
+    "objectID": "intelligent-systems.html#lenet-5",
+    "href": "intelligent-systems.html#lenet-5",
+    "title": "Evolution of Computer Vision",
+    "section": "LeNet-5",
+    "text": "LeNet-5\n\nFirst Convolutional Neural Network as we know it today"
+  },
+  {
+    "objectID": "intelligent-systems.html#comparison",
+    "href": "intelligent-systems.html#comparison",
+    "title": "Evolution of Computer Vision",
+    "section": "Comparison",
+    "text": "Comparison"
+  },
+  {
+    "objectID": "intelligent-systems.html#one-small-step",
+    "href": "intelligent-systems.html#one-small-step",
+    "title": "Evolution of Computer Vision",
+    "section": "One Small Step",
+    "text": "One Small Step\nLimitations of the Past\n\n\nLack of large structured datasets\nLack of computational power"
+  },
+  {
+    "objectID": "intelligent-systems.html#imagenet-a-large-scale-hierarchical-image-database",
+    "href": "intelligent-systems.html#imagenet-a-large-scale-hierarchical-image-database",
+    "title": "Evolution of Computer Vision",
+    "section": "ImageNet: A Large-Scale Hierarchical Image Database",
+    "text": "ImageNet: A Large-Scale Hierarchical Image Database\n\n\n\n3.2 million images at time of publication\nPASCAL VOC\nImageNet Large Scale Visual Recognition Challenge (ILSVRC)\n\n\nFei-Fei Li"
+  },
+  {
+    "objectID": "intelligent-systems.html#imagenet-snapshot",
+    "href": "intelligent-systems.html#imagenet-snapshot",
+    "title": "Evolution of Computer Vision",
+    "section": "ImageNet: Snapshot",
+    "text": "ImageNet: Snapshot"
+  },
+  {
+    "objectID": "intelligent-systems.html#alexnet-architecture",
+    "href": "intelligent-systems.html#alexnet-architecture",
+    "title": "Evolution of Computer Vision",
+    "section": "AlexNet: Architecture",
+    "text": "AlexNet: Architecture"
+  },
+  {
+    "objectID": "intelligent-systems.html#review",
+    "href": "intelligent-systems.html#review",
+    "title": "Evolution of Computer Vision",
+    "section": "Review",
+    "text": "Review\n\n\nTraditional Techniques\n\n\nTedious and time consuming\nInfeasible for complex images\nFAST\n\n\nDeep Learning\n\n\n“Easy”\nLARGE datasets\nExpensive compute\n\n\n\nHybrid / Mixed Approaches\nRare cancer detection is hard"
+  },
+  {
+    "objectID": "intelligent-systems.html#references",
+    "href": "intelligent-systems.html#references",
+    "title": "Evolution of Computer Vision",
+    "section": "References",
+    "text": "References\n[1] Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. 2009. ImageNet: A large-scale hierarchical image database. In 2009 IEEE Conference on Computer Vision and Pattern Recognition, June 2009. 248–255. . https://doi.org/10.1109/CVPR.2009.5206848  \n[2] Kunihiko Fukushima. 1988. Neocognitron: A hierarchical neural network capable of visual pattern recognition. Neural Networks 1, 2 (January 1988), 119–130. https://doi.org/10.1016/0893-6080(88)90014-7  \n[3] Zabit Hameed, Begonya Garcia-Zapirain, José Javier Aguirre, and Mario Arturo Isaza-Ruget. 2022. Multiclass classification of breast cancer histopathology images using multilevel features of deep convolutional neural network. Sci Rep 12, 1 (September 2022), 15600. https://doi.org/10.1038/s41598-022-19278-2  \n[4] Lei He, L. Rodney Long, Sameer Antani, and George R. Thoma. 2012. Histology image analysis for carcinoma detection and grading. Computer Methods and Programs in Biomedicine 107, 3 (September 2012), 538–556. https://doi.org/10.1016/j.cmpb.2011.12.007  \n[5] D. H. Hubel and T. N. Wiesel. 1959. Receptive fields of single neurones in the cat’s striate cortex. J Physiol 148, 3 (October 1959), 574–591.  \n[6] Fumi Katsuki and Christos Constantinidis. 2014. Bottom-Up and Top-Down Attention: Different Processes and Overlapping Neural Systems. Neuroscientist 20, 5 (October 2014), 509–521. https://doi.org/10.1177/1073858413514136  \n[7] Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton. 2012. ImageNet Classification with Deep Convolutional Neural Networks. In Advances in Neural Information Processing Systems, 2012. Curran Associates, Inc. . Retrieved December 1, 2023 from https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html  \n[8] Brajesh Kumar. 2021. Convolutional Neural Networks: A Brief History of their Evolution. AppyHigh Blog. Retrieved December 1, 2023 from https://medium.com/appyhigh-technology-blog/convolutional-neural-networks-a-brief-history-of-their-evolution-ee3405568597  \n[9] Yann LeCun, Leon Bottou, Yoshua Bengio, and Patrick Ha. 1998. Gradient-Based Learning Applied to Document Recognition. (1998).  \n[10] Niall O’ Mahony, Sean Campbell, Anderson Carvalho, Suman Harapanahalli, Gustavo Velasco-Hernandez, Lenka Krpalkova, Daniel Riordan, and Joseph Walsh. 2020. Deep Learning vs. Traditional Computer Vision. https://doi.org/10.1007/978-3-030-17795-9  \n[11] Irhum Shafkat. 2018. Intuitively Understanding Convolutions for Deep Learning. Medium. Retrieved December 3, 2023 from https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1  \n[12] Richard Szeliski. 2022. Computer Vision: Algorithms and Applications. Springer International Publishing, Cham. https://doi.org/10.1007/978-3-030-34372-9  \n[13] Xiongwei Wu, Doyen Sahoo, and Steven C. H. Hoi. 2020. Recent advances in deep learning for object detection. Neurocomputing 396, (July 2020), 39–64. https://doi.org/10.1016/j.neucom.2020.01.085  \n[14] 2017. The data that transformed AI research—and possibly the world. Quartz. Retrieved December 1, 2023 from https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world  \n[15] A Brief History of Computer Vision (and Convolutional Neural Networks) | HackerNoon. Retrieved December 1, 2023 from https://hackernoon.com/a-brief-history-of-computer-vision-and-convolutional-neural-networks-8fe8aacc79f3  \n[16] CS5670: Introduction to Computer Vision, Spring 2023 – Cornell Tech. Retrieved December 2, 2023 from https://www.cs.cornell.edu/courses/cs5670/2023sp/"
+  }
+]
